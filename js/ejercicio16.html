@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+</head>
+<body>
+<script>
+
+        const sumarRango = (numeroInicial, numeroFinal) => {
+            let suma = 0;
+            for (let i = numeroInicial; i <= numeroFinal; i++) {
+                suma += i;
+            }
+            return suma;
+        };
+
+        let inicio, fin;
+
+        do {
+            inicio = parseInt(prompt("Ingrese el número inicial (debe ser menor o igual al final):"));
+            fin = parseInt(prompt("Ingrese el número final:"));
+
+
+            if (inicio > fin) {
+                alert("Error: El número inicial no puede ser mayor que el final. Inténtelo de nuevo.");
+            }
+        } while (inicio > fin); // Se repite mientras la condición de error se cumpla 
+
+        const resultadoTotal = sumarRango(inicio, fin);
+
+        document.write(`
+            <h2>Resultado de la Suma</h2>
+            <p>Rango procesado: de <strong>${inicio}</strong> a <strong>${fin}</strong>.</p>
+            <p>La suma total incluyendo los extremos es: <strong>${resultadoTotal}</strong>.</p>
+        `);
+    </script>
+</body>
+</html>

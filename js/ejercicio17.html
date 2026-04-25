@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 17</title>
+</head>
+<body>
+    <script>
+        
+        const contarLetraA = (texto) => {
+            let contador = 0;
+            
+            for (let i = 0; i < texto.length; i++) {
+                if (texto[i] === 'a' || texto[i] === 'A') {
+                    contador++;
+                }
+            }
+            return contador;  
+        };
+
+        const cadenaUsuario = prompt("Ingrese una palabra o frase:");
+
+        if (cadenaUsuario !== null) { 
+            const cantidad = contarLetraA(cadenaUsuario);
+            
+            document.write(`
+                <h2>Analizador de texto</h2>
+                <p>La frase ingresada es: "<strong>${cadenaUsuario}</strong>"</p>
+                <p>La letra 'a' aparece: <strong>${cantidad}</strong> veces.</p>
+            `);
+        }
+    </script>
+</body>
+</html>

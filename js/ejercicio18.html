@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18</title>
+</head>
+<body>
+    <script>
+
+        const calcularMayor = (numero1, numero2) => {
+            let mensaje;
+
+            if (numero1 > numero2) {
+                mensaje = `El primer número (${numero1}) es mayor que el segundo (${numero2}).`; 
+            } else if (numero2 > numero1) {
+                mensaje = `El segundo número (${numero2}) es mayor que el primero (${numero1}).`; 
+            } else {
+                mensaje = `Ambos números son iguales (${numero1}).`; 
+            }
+
+            console.log(mensaje);
+            document.write(`<h3>${mensaje}</h3>`);
+        };
+
+        const n1 = parseFloat(prompt("Ingrese el primer número:"));
+        const n2 = parseFloat(prompt("Ingrese el segundo número:"));
+
+
+        if (!isNaN(n1) && !isNaN(n2)) {
+            calcularMayor(n1, n2);
+        } else {
+            document.write("<h3 style='color:red;'>Error: Ingrese valores numéricos válidos.</h3>");
+        }
+    </script>
+</body>
+</html>
