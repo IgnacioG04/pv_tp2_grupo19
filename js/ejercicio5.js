@@ -1,8 +1,9 @@
-const ConversionSegundos = (hora,minutos) => {
-    const conversionasegundos = (hora * 3600) + (minutos * 60);
+const horas = 5;
+const minutos = 35;
 
-    console.log (`Hora: ${hora} Minutos:${minutos} En Segundos: ${conversionasegundos}`);
-
+const ConversionSegundos = (h, m) => {
+    const conversionasegundos = (h * 3600) + (m * 60);
+    console.log(`Hora: ${h} Minutos: ${m} En Segundos: ${conversionasegundos}`);
 };
 
- ConversionSegundos(5,35);
+ConversionSegundos(horas, minutos);
