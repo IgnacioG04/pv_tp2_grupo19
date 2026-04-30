@@ -1,5 +1,3 @@
-// funciones25.js — módulo con la lógica de colores
-
 const colores = [
   { hex: "#e74c3c", nombre: "Rojo"        },
   { hex: "#3498db", nombre: "Azul"        },
